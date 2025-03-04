@@ -1,9 +1,19 @@
-﻿namespace ThemeParkCalculationTask
+namespace ThemeParkCalculationTask
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+			Console.WriteLine("Enter the number of people");
+			int peoplenum = Convert.ToInt32(Console.ReadLine());
+			int cost = peoplenum * 15;
+			if (peoplenum >= 6)
+			{
+			cost = cost - 5;
+			}
+			Console.WriteLine($"Your total cost is £{cost}");
+
+            
             /* A theme park charges £15 per person for a daily ticket. If there are six or more people in a group, the group is given a £5 discount.
                Write a C# program to calculate the total charge for a group of people visiting the theme park.
                The program must:
